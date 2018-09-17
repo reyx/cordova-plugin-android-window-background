@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-android-window-background" version="1.0.1">
-    <name>Android Window Background</name>
-    <description>Plugin to set Android window background for Cordova/Ionic applications</description>
-    <license>MIT</license>
-    <author>WINTER</author>
-    <keywords>cordova,ionic,android,window background,color,background,window,theme,styles.xml</keywords>
-	
+	<name>Android Window Background</name>
+	<description>Plugin to set Android window background for Cordova/Ionic applications</description>
+	<license>MIT</license>
+	<author>WINTER</author>
+	<keywords>cordova,ionic,android,window background,color,background,window,theme,styles.xml</keywords>
 	<engines>
-	  <engine name="cordova-android" version=">=7.0.0" />
+		<engine name="cordova-android" version=">=7.0.0" />
 	</engines>
-
-  	<platform name="android">
-  		<edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="merge">
-  			<activity android:name="MainActivity" android:theme="@style/CordovaWindowBackgroundTheme"/>
-  		</edit-config>
-
-  		<config-file target="app/src/main/res/values/cordova-window-background-styles.xml" parent="/*">
-  			<style name="CordovaWindowBackgroundTheme" parent="@android:style/Theme.NoTitleBar">
-  				<item name="android:background">@drawable/screen</item>
-  			</style>
-  		</config-file>
-  	</platform>
+	<platform name="android">
+		<edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="merge">
+			<activity android:name="MainActivity" android:theme="@style/CordovaWindowBackgroundTheme"/>
+		</edit-config>
+		<config-file target="app/src/main/res/values/cordova-window-background-styles.xml" parent="/*">
+			<style name="CordovaWindowBackgroundTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+				<item name="android:background">@drawable/screen</item>
+			</style>
+		</config-file>
+	</platform>
 </plugin>
