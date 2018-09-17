@@ -13,7 +13,7 @@
 			<activity android:name="MainActivity" android:theme="@style/CordovaWindowBackgroundTheme"/>
 		</edit-config>
 		<config-file target="app/src/main/res/values/cordova-window-background-styles.xml" parent="/*">
-			<style name="CordovaWindowBackgroundTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+			<style name="CordovaWindowBackgroundTheme" parent="@android:style/Theme.NoTitleBar">
 				<item name="android:background">@drawable/screen</item>
 			</style>
 		</config-file>
